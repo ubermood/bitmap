@@ -1,0 +1,30 @@
+<html>
+<head>
+        <title>Bitmap Editor</title>
+        <meta name="viewport" content="width=480" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+        <div id="divTopBar">
+                <div class="label">Input data</div>
+                <div id="hexInput"><input name="hexInput"></div>
+
+                <div class="divButtons">
+                        <div><input type="button" name="btnSwapBytes" value="Swap bytes" title="Swaps the bytes on each row (will not affect the HEX output)"></div>
+                        <div><input type="button" name="btnShowBitPos" value="Show bits" title=""></div>
+                        <div class="label">W:</div><input name="bmpSizeX" value="8">
+                        <div class="label">H:</div><input name="bmpSizeY" value="16">
+                        <div class="label">ZOOM:</div><input type="range" name="rngPixelSize" min="1" max="16" value="16" step="1">
+                </div>
+        </div>
+
+        <div id="divBitmapEditor"></div>
+
+        <div id="divBottomBar">
+                <div class="label">Output data</div>
+                <div id="hexOutput"></div>
+        </div>
+</body>
+</html>
