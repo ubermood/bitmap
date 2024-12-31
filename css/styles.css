@@ -1,0 +1,152 @@
+:root {
+    --pixSize: 16px;
+    --pixMargin: 1px;
+}
+
+body {
+    background: #222;
+    color: #fff;
+    font-family: "Arial";
+    font-size: 12pt;
+}
+
+#divTopBar {
+    position: fixed;
+    background: #0006;
+    width: 100%;
+    top: 0;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    z-index: 1;
+    backdrop-filter: blur(12px);
+}
+
+#divBottomBar {
+    position: fixed;
+    background: #0006;
+    width: 100%;
+    bottom: 0;
+    border-top: 2px solid #000;
+    padding: 10px;
+    z-index: 1;
+    transition: opacity 1s;
+    backdrop-filter: blur(12px);
+}
+
+input[type='button'] {
+    background: #064b;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    color: #fff;
+    margin-right: 2px;
+}
+
+input[name='hexInput'] {
+    background: #fff2;
+    color: #fff;
+    font-family: monospace;
+    font-size: 8pt;
+    padding: 10px;
+    width: 648px;
+    border-radius: 6px;
+    border: 2px solid #fff2;
+}
+
+input[name='bmpSizeX'],
+input[name='bmpSizeY'] {
+    background: #fff2;
+    color: #fff;
+    width: 45px;
+    border-radius: 6px;
+    border: 2px solid #fff2;
+    height: 30px;
+    text-align: center;
+}
+
+#hexOutput {
+    font-family: monospace;
+    font-size: 8pt;
+    background: #0004;
+    padding: 10px;
+    width: 623px;
+    border-radius: 6px;
+    border: 2px solid #fff2;
+    min-height: 8pt;
+    max-height: 22pt;
+    overflow: scroll;
+}
+
+.bitmapRowDivider {
+    clear:both;
+}
+
+.bitmapDivider {
+    clear: both;
+    background: #000;
+    height: 4px;
+    border: 1px solid #000;
+}
+
+#divBitmapEditor {
+    background: #04a8;
+    position: relative;
+    top: 180px;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 8px;
+    color: transparent;
+    transition: color 1s;
+}
+
+.divButtons {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+
+canvas {
+    background: #000;
+    border: 1px solid #fff2;
+}
+
+#divPointer {
+    position: relative;
+    background: #fff4;
+    width: 10px;
+    height: 16px;
+    cursor: crosshair;
+    border: 1px solid #fff;
+}
+
+.pixel {
+    width: var(--pixSize);
+    height: var(--pixSize);
+    margin: var(--pixMargin);
+    display: block;
+    float: left;
+    font-size: 8px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 17px;
+    transition: background 0.2s, width 0.5s ease-out, height 0.5s ease-out, margin 1s;
+}
+
+.changed {
+    opacity: 0.8;    
+}
+
+.bit0 {
+    background: #000;
+}
+
+.bit1 {
+    background: #fff;
+}
+
+.label {
+    color: #fffc;
+    line-height: 12px;
+    margin: 10px;
+}
